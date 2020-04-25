@@ -1,31 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
+<!-- Cabecera. Aquí es dónde se ponen los metadatos del documento HTML -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <!--
+  Metadatos. Muestran información sobre la página web que los contiene.
+  Son usados por los buscadores para definir la información principal 
+  de nuestra web (temática, descripción...) 
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ejemplo de Página Web" />
+  <meta name="language" content="ES">
+  <meta name="author" content="Luis Marcelo Chinea Rangel">
+  <!-- Hoja de Estilo del documento (Se encuentra en un fichero CSS) -->
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <!--
+  Título del documento HTML. No solo sirve para darle un nombre, sino también
+  como texto de marcador en favoritos de la página y cómo título en los buscadores
+  -->
+  <title>Ejemplo de Página HTML</title>
 </head>
 
+<!-- Cuerpo. Aquí están los elementos visibles del documento HTML -->
 <body>
-    <head>
-        <title>My First Page</title>
-    </head>
+  <header>
+    <strong>Prácticas de HTML, CSS y JS</strong>
+    <a class="website" href="https://www.w3schools.com/">W3Schools</a>
+  </header>
 
-    <body>
-        <h1>My First Page</h1>
-        <h2>I hope you like it!</h2>
-        
-        <!-- Image -->
-        <img src="https://images1.wikia.nocookie.net/__cb20110414213614/es.pokemon/images/1/19/Hydreigon_%28dream_world%29.png">
+  <main>
+    <p class="intro">Esta es una página con fines didácticos para aprender el funcionamiento de los lenguajes
+      <!-- Hipervínculos -->
+      HTML (<a href="https://es.wikipedia.org/wiki/HTML">Hypertext Markup Language</a>),
+      CSS (<a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada">Cascading Style Sheets</a>) y
+      JS (<a href="https://es.wikipedia.org/wiki/JavaScript">JavaScript</a>).
+    </p>
+    <p>
+      Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. 
+      Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+    </p>
+    <p>
+      Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. 
+      Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+    </p>
+    <p>
+      Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. 
+      Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+    </p>
 
-        <script src="index.js" type="text/javascript"></script>
-        <script>
-            greet('Iluzio');
-        </script>
-    </body>
-    
-    </script>
+    <article>
+      <!-- Tabla -->
+      <table class="students">
+        <!-- Leyenda de la Tabla-->
+        <caption>Ejemplo de una Tabla</caption>
+        <thead>
+          <tr><th>Nombre</th><th>Grado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Luis</td><td>Ingeniería Informática</td></tr>
+          <tr><td>Carla</td><td>Ingeniería Informática</td></tr>
+          <tr><td>Miguel</td><td>Ingeniería Informática</td></tr>
+          <tr><td>Eduardo</td><td>Ingeniería Informática</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><th colspan="2">Todos son alumnos de Ingeniería Informática en la ULL</th></tr>
+        </tfoot>
+      </table>
+    </article>
+  </main>
+
+  <footer>
+    <!-- Uso de scripts (Por ejemplo, JS) -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <strong>Número de párrafos: <script type="text/javascript">getParagraphs();</script></strong>
+    <a class="social-network" href="https://github.com/LuismGH"><img src="img/GitHub-Mark-Light-120px-plus.png"></a>
+    <a class="social-network" href="https://www.linkedin.com/in/luismchr/"><img src="img/Linkedin-Logo.png"></a>
+    <a class="social-network" href="https://twitter.com/luismchr_"><img src="img/Twitter-Logo.png"></a>
+  </footer>
 </body>
 
 </html>
