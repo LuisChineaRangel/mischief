@@ -1,0 +1,581 @@
+@import url('../css/fonts.css');
+
+/*--------------------------- MAIN STYLES ---------------------------*/
+
+html, body {
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /*--- Theme Fonts ---*/
+  --Oswald: 'Oswald', cursive;
+  --Inter: 'Inter', cursive;
+  --Ubuntu: 'Ubuntu', cursive;
+  --Anton: 'Anton', cursive;
+  --Gemunu_Libre: 'Gemunu_Libre', cursive;
+  /*--- Color Palette ---*/
+  --text-gray: #3f4954;
+  --text-light : #686666da;
+  --color-primary-1: #b467eb;
+  --color-primary-2: #d8a2ff;
+  --color-primary-3: #41056D;
+  --gradient: linear-gradient(to right, #ff66ff 0%, #00ccff 100%);
+}
+
+
+/*--------------------------- GLOBAL CLASSES ---------------------------*/
+
+a {
+  text-decoration: none;
+  color: var(--text-gray);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+h1 {
+  font-family: var(--Gemunu_Libre);
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: var(--Gemunu_Libre);
+}
+
+h3 {
+  font-family: var(--Gemunu_Libre);
+  font-size: 1.3rem;
+}
+
+button.btn {
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: var(--Inter);
+  cursor: pointer;
+}
+
+span {
+  font-family: var(--Ubuntu);
+}
+
+.container {
+  margin: 0 5vw;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-gray {
+  color: var(--text-gray) !important;
+}
+
+p {
+  font-family: var(--Ubuntu);
+  color: var(--text-light);
+}
+
+/*--------------------------- NAVBAR ---------------------------*/
+
+.nav {
+  background: white;
+  padding: 0 2rem;
+  height: 0rem;
+  min-height: 8vh;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+  font-size: 1.4rem;
+  color: var(--color-primary-3);
+}
+
+.collapse {
+  height: 30rem;
+}
+
+.nav .nav-items {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.nav .nav-items .nav-link {
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: var(--Ubuntu);
+  padding: 100% 1rem;
+  position: relative;
+}
+
+.nav .nav-items .nav-link:hover {
+  background-color: var(--color-primary-1);
+}
+
+.nav .nav-items .nav-link:hover a {
+  color: white;
+}
+
+.nav .nav-brand {
+  width: fit-content;
+}
+
+.nav .nav-brand a {
+  white-space: nowrap;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: var(--Inter);
+  padding: 1rem 0;
+  display: block;
+}
+
+.nav .social {
+  display: flex;
+  align-items: center;
+  padding: 1.4rem 0;
+}
+
+.nav .social i {
+  padding: 0.2rem;
+}
+
+.nav .social i:hover {
+  color: var(--color-primary-2);
+}
+
+/*--------------------------- MAIN SECTION ---------------------------*/
+
+main .site-title {
+  background: url('../assets/imgs/background.jpg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main .site-title .site-background {
+  padding-top: 10rem;
+  text-align: center;
+  color: white;
+}
+
+main .site-title h1, h3 {
+  margin: .3rem;
+}
+
+main .site-title .btn {
+  margin: 1.8rem;
+  background: var(--gradient);
+}
+
+main .site-title .btn:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+main .blog {
+  padding: 5rem 0;
+  height: 70vh;
+  width: 100%;
+}
+
+main .blog .blog-post {
+  padding-top: 6rem;
+  height: 40vh;
+}
+
+main .blog-post .blog-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  height: 50vh;
+  margin: 3rem 2rem;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .blog-post .blog-content img{
+  object-fit: cover;
+  height: 15rem;
+  width: 100%;
+}
+
+main .blog-content .blog-title {
+  padding: 2rem 0;
+}
+
+main .blog-content .btn-blog {
+  color: white;
+  padding: .7rem 2rem;
+  background: var(--gradient);
+  margin: .5rem;
+}
+
+main .blog-content span {
+  display: block;
+}
+
+/*--------------------------- Blog Carousel ---------------------------*/
+
+section .container .owl-nav {
+  position: absolute;
+  top: 5%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next {
+  color: black;
+  background: transparent;
+  font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: transparent;
+  color: black;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+  outline: none;
+}
+
+/*--------------------------- Site Content ---------------------------*/
+
+main .site-content {
+  padding-top: 6rem;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+main .post-content {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+main .site-content .post-content > .post-image, .post-title {
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+main .site-content .post-content > .post-image .post-info {
+  background: var(--gradient);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0%;
+  left: 20vw;
+  border-radius: 3rem;
+}
+
+main .site-content .post-content > .post-image > div {
+  overflow: hidden;
+}
+
+main .site-content .post-content > .post-image .img {
+  width: 100%;
+  transition: all 1s ease;
+}
+
+main .site-content .post-content > .post-image .img:hover {
+  transform: scale(1.3);
+}
+
+main .site-content .post-content > .post-image .post-info span {
+  margin: 0.5rem;
+  color: white;
+}
+
+main .post-content .post-title a {
+  font-family: var(--Anton);
+  font-size: 1.5rem;
+}
+
+.site-content .post-content .post-title .post-btn {
+  color: white;
+  border-radius: 0;
+  padding: .7rem 1.5rem;
+  background: var(--gradient);
+}
+
+.site-content .pagination {
+  justify-content: center;
+  color: var(--text-gray);
+  margin: 4rem 0;
+}
+
+.site-content .pagination a {
+  padding: .6rem .9rem;
+  border-radius: 2rem;
+  margin: 0.3rem;
+  font-family: var(--Gemunu_Libre);
+}
+
+.site-content .pagination .page {
+  background: var(--text-gray);
+  color: white;
+}
+
+/*--------------------------- Sidebar ---------------------------*/
+
+.site-content > .sidebar .category-list {
+  font-family: var(--Ubuntu);
+}
+
+.site-content > .sidebar .category-list .list-items {
+  background: var(--gradient);
+  padding: .4rem 1rem;
+  margin: .8rem 0;
+  border-radius: 3rem;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.site-content > .sidebar .category-list .list-items a {
+  color: white;
+}
+
+.site-content .sidebar .popular-post .post-content {
+  padding: 1rem 0;
+}
+
+.site-content .sidebar .popular-post h2 {
+  padding-top: 8rem;
+}
+
+.site-content .sidebar .popular-post .post-info {
+  padding: .4rem .1rem !important;
+  bottom: 0rem !important;
+  left: 1.5rem !important;
+  border-radius: 0rem !important;
+  background: white !important;
+}
+
+.site-content .sidebar .popular-post .post-title a {
+  font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter {
+  padding-top: 10rem;
+}
+
+.site-content .sidebar .newsletter .form-element {
+  padding: .5rem 2rem;
+}
+
+.site-content .sidebar .newsletter .input-element {
+  width: 80%;
+  height: 1.9rem;
+  padding: .3rem .5rem;
+  font-family: var(--Ubuntu);
+  font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter .form-btn {
+  border-radius: 0;
+  padding: .8rem 32%;
+  margin: 1rem 0;
+  background: var(--gradient);
+}
+
+.site-content .sidebar .popular-tags {
+  padding: 5rem 0;
+}
+
+.site-content .sidebar .popular-tags .tags .tag {
+  display: inline-block;
+  background: var(--gradient);
+  color: white;
+  padding: .4rem 1rem;
+  border-radius: 3rem;
+  margin: .4rem .6rem;
+}
+
+/*--------------------------- Footer ---------------------------*/
+
+footer.footer {
+  height: 100%;
+  background: #0C0C0C;
+  position: relative;
+}
+
+footer.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+footer.footer .container > div {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 3rem .9rem;
+}
+
+footer.footer .container h2 {
+  color: white;
+}
+
+footer.footer .newsletter input {
+  padding: .5rem .7rem;
+  border: none;
+  background: black;
+  color: white;
+  font-family: var(--Ubuntu);
+  font-size: 1rem;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+footer.footer .newsletter .btn {
+  border-radius: 0;
+  padding: .5rem .7rem;
+  margin: 1rem 0;
+  background: var(--text-gray);
+  width: 70%;
+  box-sizing: border-box;
+}
+
+footer.footer .instagram div > img {
+  display: inline-block;
+  object-fit: cover;
+  width: 25%;
+  height: auto;
+  margin: .3rem .4rem;
+}
+
+footer.footer .follow div a i {
+  color: white;
+  padding: 0 .4rem;
+}
+
+footer.footer .follow div a i:hover{
+  color: var(--text-gray);
+}
+
+footer.footer .rights {
+  justify-content: center;
+  font-family: var(--Inter);
+}
+
+footer.footer .rights h4 a {
+  color: white !important;
+}
+
+footer.footer .move-up {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+}
+
+footer.footer .move-up span {
+  color: white;
+}
+
+footer.footer .move-up span:hover {
+  color: var(--text-gray);
+  cursor: pointer;
+}
+
+/*--------------------------- Viewport less then or equal to 1130px ---------------------------*/
+
+@media only screen and (max-width: 1130px) {
+  .site-content .post-content > .post-image .post-info {
+    left: 2rem !important;
+    bottom: 1.2rem !important;
+    border-radius: 0% !important;
+  }
+
+  .site-content .sidebar .popular-post .post-info {
+    display: none !important;
+  }
+
+  footer.footer .container {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+/*--------------------------- Viewport less then or equal to 750px ---------------------------*/
+
+@media only screen and (max-width: 750px) {
+  .nav .nav-menu, .nav .nav-items {
+      flex-direction: column;
+  }
+  .nav .toggle-collapse {
+      display: initial;
+  }
+
+  main .site-content {
+    grid-template-columns: 100%;
+  }
+
+  footer.footer .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*--------------------------- Viewport less then or equal to 520px ---------------------------*/
+
+@media only screen and (max-width: 520px) {
+  main .blog {
+    height: 125vh;
+  }
+
+  .site-content .post-content > .post-image .post-info {
+    display: none;
+  }
+
+  footer.footer .container > div {
+    padding: 1rem .9rem !important;
+  }
+
+  footer.footer .rights {
+    padding: 0 1.4rem;
+    text-align: center;
+  }
+
+  nav .toggle-colapse {
+    width: 80% !important;
+  }
+}

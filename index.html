@@ -1,83 +1,313 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!-- Cabecera. Aquí es dónde se ponen los metadatos del documento HTML -->
 <head>
-  <!--
-  Metadatos. Muestran información sobre la página web que los contiene.
-  Son usados por los buscadores para definir la información principal 
-  de nuestra web (temática, descripción...) 
-  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ejemplo de Página Web" />
-  <meta name="language" content="ES">
+  <meta name="description" content="Mischief Studio's Website" />
+  <meta name="language" content="EN">
   <meta name="author" content="Luis Marcelo Chinea Rangel">
-  <!-- Hoja de Estilo del documento (Se encuentra en un fichero CSS) -->
-  <link rel="stylesheet" type="text/css" href="css/default.css">
-  <!--
-  Título del documento HTML. No solo sirve para darle un nombre, sino también
-  como texto de marcador en favoritos de la página y cómo título en los buscadores
-  -->
-  <title>Ejemplo de Página HTML</title>
+  <title>Mischief Studio</title>
+
+  <link rel="stylesheet" type="text/css" href="./css/all.css">
+  <link rel="stylesheet" type="text/css" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/owl.theme.default.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/aos.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
-<!-- Cuerpo. Aquí están los elementos visibles del documento HTML -->
 <body>
-  <header>
-    <strong>Prácticas de HTML, CSS y JS</strong>
-    <a class="website" href="https://www.w3schools.com/">W3Schools</a>
-  </header>
-
+  <!--------------------------- NAVIGATION ---------------------------->
+  <nav class="nav">
+    <div class="nav-menu flex-row">
+      <div class="nav-brand">
+        <a href="#">Mischief Studio</a>
+      </div>
+      <div class="toggle-collapse">
+        <div class="toggle-icons">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div>
+        <ul class="nav-items">
+          <li class="nav-link">
+            <a href="#">Home</a>
+          </li>
+          <li class="nav-link">
+            <a href="#site-content">Category</a>
+          </li>
+          <li class="nav-link">
+            <a href="#">Archives</a>
+          </li>
+          <li class="nav-link">
+            <a href="#">Pages</a>
+          </li>
+          <li class="nav-link">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social text-white">
+        <a href="https://www.instagram.com/luismchr_"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/luismchr_"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/LuismGH"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!--------------------------- MAIN SECTION ---------------------------->
   <main>
-    <p class="intro">Esta es una página con fines didácticos para aprender el funcionamiento de los lenguajes
-      <!-- Hipervínculos -->
-      HTML (<a href="https://es.wikipedia.org/wiki/HTML">Hypertext Markup Language</a>),
-      CSS (<a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada">Cascading Style Sheets</a>) y
-      JS (<a href="https://es.wikipedia.org/wiki/JavaScript">JavaScript</a>).
-    </p>
-    <p>
-      Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. 
-      Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-    </p>
-    <p>
-      Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. 
-      Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-    </p>
-    <p>
-      Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. 
-      Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
-    </p>
+    <!--- Titlte -->
+    <section class="site-title">
+      <div class="site-background" data-aos="fade-up" data-aos-delay="10">
+        <h3>Videogame Blog</h3>
+        <h1>Developing Illusions</h1>
+        <button class="btn" onclick="window.location.href='#carousel'">Explore</button>
+      </div>
+    </section>
 
-    <article>
-      <!-- Tabla -->
-      <table class="students">
-        <!-- Leyenda de la Tabla-->
-        <caption>Ejemplo de una Tabla</caption>
-        <thead>
-          <tr><th>Nombre</th><th>Grado</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Luis</td><td>Ingeniería Informática</td></tr>
-          <tr><td>Carla</td><td>Ingeniería Informática</td></tr>
-          <tr><td>Miguel</td><td>Ingeniería Informática</td></tr>
-          <tr><td>Eduardo</td><td>Ingeniería Informática</td></tr>
-        </tbody>
-        <tfoot>
-          <tr><th colspan="2">Todos son alumnos de Ingeniería Informática en la ULL</th></tr>
-        </tfoot>
-      </table>
-    </article>
+    <!--- Carousel -->
+    <section>
+      <div class="blog" id="carousel">
+        <div class="container">
+          <div class="owl-carousel owl-theme blog-post">
+            <div class="blog-content" data-aos="flip-up" data-aos-delay="200">
+              <img src="./assets/imgs/post-1.png" alt="post-1">
+              <div class="blog-title">
+                <h3>Toby Fox's Innovative Works. From EarthBound Halloween Hack to Deltarune</h3>
+                <button class="btn btn-blog">Read More</button>
+                <span>3 minutes</span>
+              </div>
+            </div>
+            <div class="blog-content" data-aos="flip-up" data-aos-delay="200">
+              <img src="./assets/imgs/post-2.jpg" alt="post-2">
+              <div class="blog-title">
+                <h3>Genshin Impact on Epic Games</h3>
+                <button class="btn btn-blog">Download</button>
+                <span>2 minutes</span>
+              </div>
+            </div>
+            <div class="blog-content" data-aos="flip-up" data-aos-delay="200">
+              <img src="./assets/imgs/post-3.jpg" alt="post-3">
+              <div class="blog-title">
+                <h3>Helltaker: A Hell of an Adventure</h3>
+                <button class="btn btn-blog">Download</button>
+                <span>4 minutes</span>
+              </div>
+            </div>
+            <div class="blog-content" data-aos="flip-up" data-aos-delay="200">
+              <img src="./assets/imgs/post-1.png" alt="post-4">
+              <div class="blog-title">
+                <h3>Deltarune Chapter 2 on Steam</h3>
+                <button class="btn btn-blog">Download</button>
+                <span>2 minutes</span>
+              </div>
+            </div>
+            <div class="blog-content" data-aos="flip-up" data-aos-delay="200">
+              <img src="./assets/imgs/post-1.png" alt="post-5">
+              <div class="blog-title">
+                <h3>Deltarune Chapter 2 on Steam</h3>
+                <button class="btn btn-blog">Download</button>
+                <span>2 minutes</span>
+              </div>
+            </div>
+            <div class="blog-content" data-aos="flip-up" data-aos-delay="200">
+              <img src="./assets/imgs/post-1.png" alt="post-6">
+              <div class="blog-title">
+                <h3>Deltarune Chapter 2 on Steam</h3>
+                <button class="btn btn-blog">Download</button>
+                <span>2 minutes</span>
+              </div>
+            </div>
+          </div>
+          <div class="owl-navigation">
+            <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+            <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--- Site Content -->
+    <section class="container">
+      <div class="site-content" id="site-content">
+        <div class="posts">
+          <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+            <div class="post-image">
+              <div>
+                <img src="./assets/imgs/post-1.png" class='img' alt="blog1">
+              </div>
+              <div class="post-info flex-row">
+                <span><i class="fas fa-user text-white"></i>&nbsp;&nbsp;Admin</span>
+                <span><i class="fas fa-calendar-alt text-white"></i>&nbsp;&nbsp; September 26, 2021</span>
+                <span>2 Comments</span>
+              </div>
+            </div>
+            <div class="post-title">
+              <a href="#">Toby Fox's Innovative Works. From EarthBound Halloween Hack to Deltarune</a>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta illo molestias, ducimus tenetur neque hic sed inventore, amet, nam perferendis magni cum cumque nisi facere reprehenderit est rem? Quas numquam iste aperiam alias quidem eum consequatur ad, libero asperiores a.</p>
+              <button class="btn post-btn">Read More &nbsp;<i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+          <hr>
+          <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+            <div class="post-image">
+              <div>
+                <img src="./assets/imgs/post-1.png" class='img' alt="blog1">
+              </div>
+              <div class="post-info flex-row">
+                <span><i class="fas fa-user text-white"></i>&nbsp;&nbsp;Admin</span>
+                <span><i class="fas fa-calendar-alt text-white"></i>&nbsp;&nbsp; September 26, 2021</span>
+                <span>2 Comments</span>
+              </div>
+            </div>
+            <div class="post-title">
+              <a href="#">Toby Fox's Innovative Works. From EarthBound Halloween Hack to Deltarune</a>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta illo molestias, ducimus tenetur neque hic sed inventore, amet, nam perferendis magni cum cumque nisi facere reprehenderit est rem? Quas numquam iste aperiam alias quidem eum consequatur ad, libero asperiores a.</p>
+              <button class="btn post-btn">Read More &nbsp;<i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+          <hr>
+          <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+            <div class="post-image">
+              <div>
+                <img src="./assets/imgs/post-1.png" class='img' alt="blog1">
+              </div>
+              <div class="post-info flex-row">
+                <span><i class="fas fa-user text-white"></i>&nbsp;&nbsp;Admin</span>
+                <span><i class="fas fa-calendar-alt text-white"></i>&nbsp;&nbsp; September 26, 2021</span>
+                <span>2 Comments</span>
+              </div>
+            </div>
+            <div class="post-title">
+              <a href="#">Toby Fox's Innovative Works. From EarthBound Halloween Hack to Deltarune</a>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta illo molestias, ducimus tenetur neque hic sed inventore, amet, nam perferendis magni cum cumque nisi facere reprehenderit est rem? Quas numquam iste aperiam alias quidem eum consequatur ad, libero asperiores a.</p>
+              <button class="btn post-btn">Read More &nbsp;<i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+          <div class="pagination flex-row">
+            <a href="#"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="page">1</a>
+            <a href="#" class="page">2</a>
+            <a href="#" class="page">3</a>
+            <a href="#"><i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+        <aside class="sidebar">
+          <div id="category" class="category">
+            <h2>Category</h2>
+            <ul class="category-list">
+              <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                <a href="#">Software</a>
+                <span>(05)</span>
+              </li>
+              <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                <a href="#">Technology</a>
+                <span>(02)</span>
+              </li>
+              <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                <a href="#">Lifestyle</a>
+                <span>(07)</span>
+              </li>
+              <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                <a href="#">Food</a>
+                <span>(01)</span>
+              </li>
+            </ul>
+          </div>
+          <div class="popular-post">
+            <h2>Popular Post</h2>
+            <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+              <div class="post-image">
+                <div>
+                  <img src="./assets/imgs/post-1.png" class='img' alt="blog1">
+                </div>
+                <div class="post-info flex-row">
+                  <span class="text-gray"><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp; September 26, 2021</span>
+                  <span class="text-gray">2 Comments</span>
+                </div>
+              </div>
+              <div class="post-title">
+                <a href="#">Toby Fox's Innovative Works. From EarthBound Halloween Hack to Deltarune</a>
+              </div>
+            </div>
+          </div>
+          <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+            <h2>Newsletter</h2>
+            <div class="form-element">
+              <input type="text" class="input-element" placeholder="E-mail">
+              <button class="btn form-btn">Subscribe</button>
+            </div>
+          </div>
+          <div class="popular-tags">
+            <h2>Popular Tags</h2>
+            <div class="tags">
+              <span class="tag" data-aos="flip-up" data-aos-delay="100">Software</span>
+              <span class="tag" data-aos="flip-up" data-aos-delay="200">Software</span>
+              <span class="tag" data-aos="flip-up" data-aos-delay="300">Softwarfe</span>
+              <span class="tag" data-aos="flip-up" data-aos-delay="400">Software</span>
+              <span class="tag" data-aos="flip-up" data-aos-delay="500">Software</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <!-- Uso de scripts (Por ejemplo, JS) -->
-    <script type="text/javascript" src="js/index.js"></script>
-    <strong>Número de párrafos: <script type="text/javascript">getParagraphs();</script></strong>
-    <a class="social-network" href="https://github.com/LuismGH"><img src="img/GitHub-Mark-Light-120px-plus.png"></a>
-    <a class="social-network" href="https://www.linkedin.com/in/luismchr/"><img src="img/Linkedin-Logo.png"></a>
-    <a class="social-network" href="https://twitter.com/luismchr_"><img src="img/Twitter-Logo.png"></a>
+  <!--------------------------- FOOTER ---------------------------->
+  <footer class="footer">
+    <div class="container">
+      <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+        <h2>About us</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore similique quam atque aspernatur cupiditate, temporibus exercitationem iste eos quidem aperiam!
+        </p>
+      </div>
+      <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+        <h2>Newsletter</h2>
+        <p>Stay update with our latest</p>
+        <div class="flex-column">
+          <input type="text" placeholder="E-mail">
+          <button class="btn form-btn">Subscribe</button>
+        </div>
+      </div>
+      <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+        <h2>Instagram</h2>
+        <div class="flex-row">
+          <img src="./assets/imgs/instagram/insta1.jpg" alt="insta1">
+          <img src="./assets/imgs/instagram/insta2.jpg" alt="insta2">
+          <img src="./assets/imgs/instagram/insta3.jpg" alt="insta3">
+        </div>
+        <div class="flex-row">
+          <img src="./assets/imgs/instagram/insta4.jpg" alt="insta4">
+          <img src="./assets/imgs/instagram/insta5.jpg" alt="insta5">
+          <img src="./assets/imgs/instagram/insta6.jpg" alt="insta6">
+        </div>
+      </div>
+      <div class="follow" data-aos="fade-left" data-aos-delay="200">
+        <h2>Follow us</h2>
+        <p>Let us be Social</p>
+        <div>
+          <a href="https://www.instagram.com/luismchr_"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/luismchr_"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/LuismGH"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="rights flex-row">
+      <h4 class="text-gray">
+        Copyright ©2021 All rights reserved | made by 
+        <a href="https://github.com/LuismGH" target="_blank">Luis Marcelo Chinea Rangel <i class="fab fa-github"></i></a>
+      </h4>
+    </div>
+    <div class="move-up">
+      <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+    </div>
   </footer>
+  <!--------------------------- SCRIPTS ---------------------------->
+  <script type="text/javascript" src="js/jquery3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
