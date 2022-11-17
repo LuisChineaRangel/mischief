@@ -1,3 +1,7 @@
+#nav-menu ul {
+  width: 100%;
+}
+
 #nav-menu .brand-logo {
   padding: 1.25rem 2.5rem;
 }
@@ -16,6 +20,21 @@
   }
 
   #nav-menu .brand-logo h1 {
+    text-align: center;
+  }
+
+  #nav-menu .link {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #nav-menu ul {
+    justify-content: center;
+  }
+
+  #nav-menu .brand-logo h1 {
+    font-size: 1.5rem;
     text-align: center;
   }
 
