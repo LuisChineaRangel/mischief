@@ -1,0 +1,51 @@
+main {
+  display: grid;
+}
+
+#site-title {
+  background: url("/resources/img/background.jpg");
+  color: white;
+  height: 35rem;
+  justify-content: center;
+}
+
+.owl-nav.disabled+.owl-dots {
+  margin: 1rem 0 !important;
+}
+
+.owl-dots .owl-dot {
+  margin: 0;
+}
+
+#carousel {
+  margin: 0 auto;
+  width: 95vw;
+}
+
+#carousel .element {
+  justify-content: space-between;
+  background: white;
+  height: 20rem;
+  margin: 2rem 0rem;
+  text-align: center;
+  width: 95%;
+}
+
+#carousel .element img {
+  height: 10rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+#carousel .element h3 {
+  max-width: 95%;
+}
+
+#carousel .element button {
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#carousel .element button:hover {
+  text-decoration-line: underline;
+}

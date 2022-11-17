@@ -1,0 +1,138 @@
+@import url('/resources/css/fonts.css');
+
+:root {
+  --background: rgb(223, 223, 223);
+  --link: 'Poppins', cursive;
+  --text: 'Ubuntu', cursive;
+  --header: 'Inter', cursive;
+  font-family: var(--text);
+
+  --color-1: rgb(62, 44, 106);
+  --color-2: rgb(107, 77, 184);
+  --color-3: #9C8DC3;
+  --color-4: rgb(242, 199, 91);
+
+  --youtube: rgb(255, 0, 0);
+  --linkedin: rgb(0, 119, 181);
+  --twitter: rgb(29, 161, 242);
+  --instagram: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  background: var(--background);
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
+  line-height: 1;
+  width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--header);
+  position: relative;
+  width: max-content;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  font-family: var(--link);
+}
+
+a:visited {
+  color: inherit;
+}
+
+button {
+  background: var(--color-1);
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+nav,
+ul {
+  height: auto;
+  width: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  float: left;
+}
+
+.flex-row {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+header,
+main,
+footer {
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  background: rgb(12, 12, 12);
+  color: white;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media only screen and (max-width: 1130px) {}
+@media only screen and (max-width: 750px) {}
+@media only screen and (max-width: 520px) {}

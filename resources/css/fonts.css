@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Inter;
+  src: url('/resources/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url('/resources/fonts/Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url('/resources/fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
