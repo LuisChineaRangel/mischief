@@ -3,22 +3,22 @@ $('.owl-carousel').owlCarousel({
   autoplay: true,
   autoplayHoverPause: true,
   autoplayTimeout: 4500,
-  dots: true,
-  nav: false,
+  dots: false,
   margin: 0,
+  items: 1, 
   responsiveClass: true,
   responsive: {
     0: {
-      items: 1
+      stagePadding: 0
     },
     520: {
-      items: 2
+      stagePadding: 0
     },
     750: {
-      items: 3
+      stagePadding: 100
     },
     1130: {
-      items: 4
+      stagePadding: 400
     }
   }
 });

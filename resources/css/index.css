@@ -1,12 +1,19 @@
 main {
-  display: grid;
+  border-bottom: 0.4rem solid var(--color-1);
+  border-top: 0.4rem solid var(--color-1);
+  height: calc(100vh - 5rem);
+  position: relative;
 }
 
-#site-title {
-  background: url("/resources/img/background.jpg");
-  color: white;
-  height: 35rem;
-  justify-content: center;
+#background {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .owl-nav.disabled+.owl-dots {
@@ -18,34 +25,47 @@ main {
 }
 
 #carousel {
+  height: 100%;
   margin: 0 auto;
-  width: 95vw;
+}
+
+#carousel .owl-stage-outer,
+.owl-stage,
+.owl-item {
+  height: 100%;
 }
 
 #carousel .element {
-  justify-content: space-between;
-  background: white;
-  height: 20rem;
-  margin: 2rem 0rem;
-  text-align: center;
-  width: 95%;
-}
-
-#carousel .element img {
-  height: 10rem;
-  object-fit: cover;
+  color: white;
+  height: 100%;
+  position: relative;
   width: 100%;
 }
 
-#carousel .element h3 {
+#carousel .element .shadow {
+  background: none;
+  box-shadow: inset 0px 50px 126px 50px rgb(0 0 0 / 100%);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+
+#carousel .element img {
+  height: 100%;
+  object-fit: cover;
+}
+
+#carousel .element h2 {
+  bottom: 1.5rem;
+  font-size: 1.8rem;
+  left: 1.5rem;
+  max-height: 25%;
   max-width: 95%;
+  position: absolute;
+  z-index: 10;
 }
 
-#carousel .element button {
-  padding: 0.5rem 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-#carousel .element button:hover {
-  text-decoration-line: underline;
+#carousel .element h2 a:hover {
+  text-decoration: underline;
 }

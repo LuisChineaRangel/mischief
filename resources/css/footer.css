@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-gap: 5vw;
+  grid-gap: 2vw;
   grid-template-columns: repeat(auto-fill, minmax(320px, auto));
   padding: 0 5vw;
   margin: 4vh 0;
@@ -22,6 +22,60 @@
   height: 0.25rem;
   position: absolute;
   width: 60%;
+}
+
+#contact div {
+  align-items: center;
+}
+
+#contact i {
+  color: var(--color-2);
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+#contact span {
+  font-family: var(--link);
+  font-size: 1.1rem;
+}
+
+#info a {
+  font-size: 1.1rem;
+  margin: 0.4rem 0;
+}
+
+#info a:hover {
+  color: var(--color-3);
+  transition: linear 0.3s;
+}
+
+#suscribe form {
+  margin-top: 0.4rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+#suscribe form input {
+  background: var(--black-2);
+  border: 0;
+  color: white;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
+#suscribe form input:focus {
+  outline-width: 0;
+}
+
+#suscribe form button {
+  background: var(--color-2);
+  border: 0;
+  height: 100%;
+  padding: 0 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 #media nav {
@@ -68,63 +122,9 @@
   background: var(--instagram);
 }
 
-#info a {
-  font-size: 1.1rem;
-  margin: 0.4rem 0;
-}
-
-#info a:hover {
-  color: var(--color-3);
-  transition: linear 0.3s;
-}
-
-#suscribe form {
-  margin-top: 0.4rem;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-#suscribe form input {
-  background: rgb(32, 32, 32);
-  border: 0;
-  color: white;
-  padding: 1rem 1.5rem;
-  width: 100%;
-}
-
-#suscribe form input:focus {
-  outline-width: 0;
-}
-
-#suscribe form button {
-  background: var(--color-2);
-  border: 0;
-  height: 100%;
-  padding: 0 1rem;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-#contact div {
-  align-items: center;
-}
-
-#contact i {
-  color: var(--color-2);
-  font-size: 1.5rem;
-  margin: 1rem;
-}
-
-#contact span {
-  font-family: var(--link);
-  font-size: 1.1rem;
-}
-
 #rights {
-  background: rgb(32, 32, 32);
-  color: rgb(129, 133, 137);
+  background: var(--black-2);
+  color: var(--grey);
   margin-top: 2vw;
   padding: 1vw 4vw;
   text-align: center;

@@ -1,28 +1,38 @@
 @import url('/resources/css/fonts.css');
 
 :root {
-  --background: rgb(223, 223, 223);
+  font-family: var(--text);
+
+  --header: 'Inter', cursive;
   --link: 'Poppins', cursive;
   --text: 'Ubuntu', cursive;
-  --header: 'Inter', cursive;
-  font-family: var(--text);
+
+  --background: rgb(223, 223, 223);
+  --black-1: rgb(12, 12, 12);
+  --black-2: rgb(32, 32, 32);
+  --grey: rgb(129, 133, 137);
+
+  --linkedin: rgb(0, 119, 181);
+  --instagram: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  --twitter: rgb(29, 161, 242);
+  --youtube: rgb(255, 0, 0);
 
   --color-1: rgb(62, 44, 106);
   --color-2: rgb(107, 77, 184);
-  --color-3: #9C8DC3;
+  --color-3: rgb(156, 141, 195);
   --color-4: rgb(242, 199, 91);
-
-  --youtube: rgb(255, 0, 0);
-  --linkedin: rgb(0, 119, 181);
-  --twitter: rgb(29, 161, 242);
-  --instagram: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   text-decoration: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 html {
@@ -36,6 +46,7 @@ body {
   grid-template-areas: "header" "main" "footer";
   grid-template-rows: auto 1fr auto;
   line-height: 1;
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -111,13 +122,13 @@ li {
 header,
 main,
 footer {
-  width: 100vw;
   box-sizing: border-box;
+  width: 100vw;
 }
 
 header,
 footer {
-  background: rgb(12, 12, 12);
+  background: var(--black-1);
   color: white;
 }
 
@@ -134,6 +145,9 @@ footer {
 }
 
 @media only screen and (max-width: 1130px) {}
+
 @media only screen and (max-width: 750px) {}
+
 @media only screen and (max-width: 520px) {}
+
 @media only screen and (max-width: 480px) {}

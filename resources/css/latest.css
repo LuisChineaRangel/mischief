@@ -24,10 +24,6 @@ main .image img {
   width: 100%;
 }
 
-main .image img:hover {
-  transform: scale(1.2);
-}
-
 main .image .info {
   align-items: center;
   bottom: 0;
@@ -47,15 +43,6 @@ main .post h3 {
   position: relative;
 }
 
-main .post h3::before {
-  background: var(--color-2);
-  bottom: -0.4rem;
-  content: "";
-  height: 0.25rem;
-  position: absolute;
-  width: 60%;
-}
-
 #latest-articles {
   background: white;
   grid-area: latest-articles;
@@ -73,8 +60,21 @@ main .post h3::before {
   padding: 2rem;
 }
 
+#latest-articles .post img:hover {
+  transform: scale(1.2);
+}
+
 #latest-articles .post h3 {
   margin: 1rem 0;
+}
+
+#latest-articles .post h3::before {
+  background: var(--color-2);
+  bottom: -0.4rem;
+  content: "";
+  height: 0.25rem;
+  position: absolute;
+  width: 60%;
 }
 
 #latest-articles .post p {
@@ -138,8 +138,21 @@ main .post h3::before {
   transition: linear 0.3s;
 }
 
-#sidebar #popular-post .image {
+#sidebar #popular-posts>div {
   padding: 0;
+}
+
+#sidebar #popular-posts .image {
+  padding: 0;
+}
+
+#sidebar #popular-posts a.name {
+  max-width: 100%;
+  padding: 1rem 0.5rem;
+}
+
+#sidebar #popular-posts a.name:hover {
+  text-decoration: underline;
 }
 
 #sidebar #popular-tags .tags {
