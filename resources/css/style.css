@@ -1,4 +1,4 @@
-@import url('/resources/css/fonts.css');
+@import url('./resources/css/fonts.css');
 
 :root {
   font-family: var(--text);
