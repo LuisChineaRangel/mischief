@@ -43,3 +43,7 @@ En este apartado nos centraremos en el impacto de la alfabetización visual en n
 Junto a los perfiles de usuario desarrollados, se proporcionarán distintas situaciones de uso del sitio web, cada uno con contexto propio y objetivos específicos dependiendo del usuario. Para poder planificar y representar gráficamente dichos escenarios, se desarrollarán user journey maps.
 
 ### Personajes y Perfiles de Usuario
+
+Se diseñarán perfiles de usuario potenciales que utilizarán la aplicación web. Este diseño deberá ser lo más detallado posible, mostrando información demográfica y recogiendo las motivaciones, frustraciones y objetivos de la persona.
+
+Analizando en profundidad las encuestas realizadas se obtendrá un perfil de usuario más detallado que pueda representar a la mayoría de los usuarios que acceden a nuestra web, y de esta manera se podrá contrastar con el diseño de perfil de usuario inicial.
