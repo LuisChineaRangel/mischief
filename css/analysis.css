@@ -1,75 +1,24 @@
-#latest .title {
+h1 {
+  font-size: 1.8rem !important;
+  margin: 1.2rem auto 1.2rem 2rem !important;
+}
+
+.title {
   background-color: black;
   border-bottom: 0.5rem solid var(--color-1);
 }
 
-#latest {
-  background-color: #232733 !important;
-}
-
-main .image {
-  color: white;
-  overflow: hidden;
-  position: relative;
-}
-
-main .image img {
-  transition: all 2s ease;
-  width: 100%;
-}
-
-main .image .info {
-  align-items: center;
-  bottom: 0;
-  left: 0;
-  padding: 0.5rem;
-  position: absolute;
-}
-
-main .image .info i {
-  font-size: 1rem;
-  font-style: normal;
-  padding: 0.5rem;
-}
-
-main .post h3 {
-  max-width: 100%;
-  position: relative;
-}
-
-#latest {
-  background: white;
-  grid-area: latest;
-}
-
-#latest h1 {
-  font-size: 1.8rem;
-  margin: 1.2rem auto 1.2rem 2rem;
-}
-
-#latest .post {
-  align-items: initial;
-  margin: 1rem 0;
-  max-width: 100%;
+.post,
+.list {
   padding: 1.5rem;
+}
+
+.post {
   background-color: white;
 }
 
-#latest .post img:hover {
-  transform: scale(1.2);
-}
-
-#latest .post h3 {
-  margin: 1rem 0;
-}
-
-#latest .post h3::before {
-  background: var(--color-1);
-  bottom: -0.4rem;
-  content: "";
-  height: 0.25rem;
-  position: absolute;
-  width: 60%;
+#latest {
+  background-color: #232733 !important;
 }
 
 #latest .post p {
@@ -77,55 +26,12 @@ main .post h3 {
   padding: 0.5rem 0;
 }
 
-#latest button {
-  margin-top: 1rem;
-  padding: 0.7rem 2rem;
-  width: fit-content;
+#sidebar > * {
+  background-color: #232733 !important;
 }
 
-#latest button:hover {
+#sidebar #categories .list {
   background: var(--color-1);
-  opacity: 0.8;
-}
-
-#sidebar {
-  grid-area: sidebar;
-}
-
-#sidebar>section {
-  background: white;
-  margin-bottom: 2rem;
-  max-width: 100%;
-  width: 100%;
-}
-
-#sidebar>section>* {
-  padding: 1rem;
-  width: 100%;
-}
-
-#sidebar h1 {
-  background: rgb(12, 12, 12);
-  color: white;
-  font-size: 1.8rem;
-  padding: 1.2rem 1rem;
-  position: relative;
-}
-
-#sidebar h1::before {
-  background: var(--color-1);
-  bottom: 0;
-  content: "";
-  height: 0.6rem;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-
-#sidebar #category #category-list {
-  font-weight: bold;
-  gap: 5%;
-  padding: 1rem;
 }
 
 #sidebar #category #category-list a:hover {
@@ -133,52 +39,15 @@ main .post h3 {
   transition: linear 0.3s;
 }
 
-#sidebar #popular-posts>div {
-  padding: 0;
+#sidebar #popular-posts .post .title {
+  border: 0;
 }
 
-#sidebar #popular-posts .image {
-  padding: 0;
+#sidebar #popular-posts .post .title a {
+  text-decoration: none;
 }
 
-#sidebar #popular-posts a.name {
-  max-width: 100%;
-  padding: 1rem 0.5rem;
-}
-
-#sidebar #popular-posts a.name:hover {
+#sidebar #popular-posts .post .title a:hover {
+  color: var(--color-1) !important;
   text-decoration: underline;
-}
-
-#sidebar #popular-tags .tags {
-  background: var(--color-1);
-  padding: 0;
-}
-
-#sidebar #popular-tags .tags .tag {
-  color: white;
-  padding: 1rem;
-}
-
-@media only screen and (max-width: 1130px) {
-  main {
-    column-gap: 1vw;
-    grid-template-columns: 60% 1fr;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  main {
-    grid-template-areas: "sidebar" "latest";
-    grid-template-columns: auto;
-    grid-template-rows: auto 1fr;
-  }
-}
-
-@media only screen and (max-width: 520px) {
-
-  main .image .info .fa-user,
-  main .image .info #editor {
-    display: none;
-  }
 }

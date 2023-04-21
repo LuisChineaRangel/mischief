@@ -11,9 +11,8 @@ main {
   z-index: 1;
 }
 
-#articles-carousel .carousel-item a.article-title {
+#articles-carousel .carousel-item a {
   bottom: 1.5rem;
-  font-size: 1.8rem;
   left: 1.5rem;
   max-height: 25%;
   max-width: 95%;
@@ -21,7 +20,7 @@ main {
   z-index: 10;
 }
 
-#articles-carousel .carousel-item a.article-title:hover {
+#articles-carousel .carousel-item a:hover {
   color: var(--color-2) !important;
 }
 
