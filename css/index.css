@@ -1,8 +1,5 @@
 main {
   width: 70% !important;
-}
-
-#articles-carousel {
   background-color: #232733;
 }
 
@@ -14,7 +11,7 @@ main {
   z-index: 1;
 }
 
-#articles-carousel .carousel-item a {
+#articles-carousel .carousel-item a.article-title {
   bottom: 1.5rem;
   font-size: 1.8rem;
   left: 1.5rem;
@@ -24,6 +21,21 @@ main {
   z-index: 10;
 }
 
-#articles-carousel .carousel-item a:hover {
+#articles-carousel .carousel-item a.article-title:hover {
   color: var(--color-2) !important;
+}
+
+#articles-carousel button .carousel-control-prev-icon,
+#articles-carousel button .carousel-control-next-icon {
+  opacity: 1;
+  width: 4vw;
+  height: 4vw;
+}
+
+#articles-carousel button .carousel-control-prev-icon {
+  background-image: url(../images/icons/left-arrow.png);
+}
+
+#articles-carousel button .carousel-control-next-icon {
+  background-image: url(../images/icons/right-arrow.png);
 }

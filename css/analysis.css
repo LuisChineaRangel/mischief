@@ -1,26 +1,20 @@
-main {
-  box-sizing: border-box;
-  column-gap: 2vw;
-  display: grid;
-  grid-template-areas: "latest-articles sidebar";
-  grid-template-columns: 65% 1fr;
-  padding: 2rem 5vw;
+#latest .title {
+  background-color: black;
+  border-bottom: 0.5rem solid var(--color-1);
 }
 
-main>* {
-  min-height: 0;
-  min-width: 0;
+#latest {
+  background-color: #232733 !important;
 }
 
 main .image {
   color: white;
-  line-height: 0;
   overflow: hidden;
   position: relative;
 }
 
 main .image img {
-  transition: all 1s ease;
+  transition: all 2s ease;
   width: 100%;
 }
 
@@ -43,33 +37,34 @@ main .post h3 {
   position: relative;
 }
 
-#latest-articles {
+#latest {
   background: white;
-  grid-area: latest-articles;
+  grid-area: latest;
 }
 
-#latest-articles h2 {
+#latest h1 {
   font-size: 1.8rem;
   margin: 1.2rem auto 1.2rem 2rem;
 }
 
-#latest-articles .post {
+#latest .post {
   align-items: initial;
-  border-top: 0.5rem solid #E0E0E0;
+  margin: 1rem 0;
   max-width: 100%;
-  padding: 2rem;
+  padding: 1.5rem;
+  background-color: white;
 }
 
-#latest-articles .post img:hover {
+#latest .post img:hover {
   transform: scale(1.2);
 }
 
-#latest-articles .post h3 {
+#latest .post h3 {
   margin: 1rem 0;
 }
 
-#latest-articles .post h3::before {
-  background: var(--color-2);
+#latest .post h3::before {
+  background: var(--color-1);
   bottom: -0.4rem;
   content: "";
   height: 0.25rem;
@@ -77,18 +72,18 @@ main .post h3 {
   width: 60%;
 }
 
-#latest-articles .post p {
+#latest .post p {
   font-size: 1.2rem;
   padding: 0.5rem 0;
 }
 
-#latest-articles button {
+#latest button {
   margin-top: 1rem;
   padding: 0.7rem 2rem;
   width: fit-content;
 }
 
-#latest-articles button:hover {
+#latest button:hover {
   background: var(--color-1);
   opacity: 0.8;
 }
@@ -109,7 +104,7 @@ main .post h3 {
   width: 100%;
 }
 
-#sidebar h2 {
+#sidebar h1 {
   background: rgb(12, 12, 12);
   color: white;
   font-size: 1.8rem;
@@ -117,8 +112,8 @@ main .post h3 {
   position: relative;
 }
 
-#sidebar h2::before {
-  background: var(--color-2);
+#sidebar h1::before {
+  background: var(--color-1);
   bottom: 0;
   content: "";
   height: 0.6rem;
@@ -134,7 +129,7 @@ main .post h3 {
 }
 
 #sidebar #category #category-list a:hover {
-  color: var(--color-3);
+  color: var(--color-2);
   transition: linear 0.3s;
 }
 
@@ -174,7 +169,7 @@ main .post h3 {
 
 @media only screen and (max-width: 750px) {
   main {
-    grid-template-areas: "sidebar" "latest-articles";
+    grid-template-areas: "sidebar" "latest";
     grid-template-columns: auto;
     grid-template-rows: auto 1fr;
   }
