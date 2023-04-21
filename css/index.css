@@ -1,62 +1,20 @@
 main {
-  border-bottom: 0.4rem solid var(--color-1);
-  border-top: 0.4rem solid var(--color-1);
-  height: calc(100vh - 5rem);
-  position: relative;
+  width: 70% !important;
 }
 
-#background {
-  height: 100%;
-  left: 0;
-  object-fit: cover;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
+#articles-carousel {
+  background-color: #232733;
 }
 
-.owl-nav.disabled+.owl-dots {
-  margin: 1rem 0 !important;
-}
-
-.owl-dots .owl-dot {
-  margin: 0;
-}
-
-#carousel {
-  height: 100%;
-  margin: 0 auto;
-}
-
-#carousel .owl-stage-outer,
-.owl-stage,
-.owl-item {
-  height: 100%;
-}
-
-#carousel .element {
-  color: white;
-  height: 100%;
-  position: relative;
-  width: 100%;
-}
-
-#carousel .element .shadow {
-  background: none;
-  box-shadow: inset 0px 50px 126px 50px rgb(0 0 0 / 100%);
+#articles-carousel .carousel-item .shadow {
+  box-shadow: inset 0px 50px 126px 50px rgb(0 0 0 / 100%) !important;
   height: 100%;
   position: absolute;
   width: 100%;
-  z-index: 5;
+  z-index: 1;
 }
 
-#carousel .element img {
-  height: 100%;
-  object-fit: cover;
-}
-
-#carousel .element h2 {
+#articles-carousel .carousel-item a {
   bottom: 1.5rem;
   font-size: 1.8rem;
   left: 1.5rem;
@@ -66,6 +24,6 @@ main {
   z-index: 10;
 }
 
-#carousel .element h2 a:hover {
-  text-decoration: underline;
+#articles-carousel .carousel-item a:hover {
+  color: var(--color-2) !important;
 }
