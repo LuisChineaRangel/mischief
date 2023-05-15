@@ -2,7 +2,7 @@
 /* Global Styles
 /**********************/
 :root {
-  --background: rgb(247,247,247);
+  --background: rgb(247, 247, 247);
   --black-1: rgb(12, 12, 12);
   --black-2: rgb(32, 32, 32);
   --grey: rgb(129, 133, 137);
@@ -44,7 +44,7 @@ header {
 }
 
 header .navbar {
-  padding: 0 !important
+  padding: 0 !important;
 }
 
 header .navbar .navbar-brand {
@@ -67,9 +67,46 @@ header .navbar #headerNavBar .navbar-nav a:hover {
 }
 
 [aria-current="page"] {
-  background-color: var(--black-2) !important; 
+  background-color: var(--black-2) !important;
   font-size: 1.2rem !important;
   text-decoration: underline !important;
+}
+
+#languageDropdown {
+  width: fit-content !important;
+}
+
+#languageDropdown img {
+  width: 1.5rem;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.dropdown-menu {
+  --bs-dropdown-min-width: fit-content !important;
+  --bs-dropdown-padding-y: 0 !important;
+  max-width: 8rem !important;
+}
+
+.dropdown-menu li {
+  max-width: fit-content !important;
+}
+
+.dropdown-menu .dropdown-item {
+  text-align: center !important;
+  padding-left: 1.5rem !important;
+  max-width: fit-content !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: white !important;
+  text-decoration: underline !important;
+  background-color: initial !important;
+}
+
+.dropdown-menu .dropdown-item img {
+  width: 1.5rem !important;
+  height: auto;
 }
 
 /**********************/
@@ -84,7 +121,7 @@ footer #copyright {
 }
 
 footer #contact-form .form-floating label {
-  color: black
+  color: black;
 }
 
 footer #info {

@@ -1,8 +1,17 @@
 <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
   <div class="container-fluid p-0">
-    <a class="navbar-brand ps-4" href="./index.html"><img src="./images/mischief/logo.webp" alt="Mischief Logo"></a>
-    <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#headerNavBar"
-      aria-controls="headerNavBar" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand ps-4" href="./index.html"
+      ><img src="./images/mischief/logo.webp" alt="Mischief Logo"
+    /></a>
+    <button
+      class="navbar-toggler me-4"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#headerNavBar"
+      aria-controls="headerNavBar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="headerNavBar">
@@ -13,23 +22,42 @@
         <a class="nav-link" href="./guides.html">Guides</a>
         <a class="nav-link" href="./our-team.html">Our Team</a>
       </div>
-      <div class="navbar-nav ms-auto me-5">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
+      <div class="navbar-nav ms-auto">
+        <div class="nav-item dropdown me-5">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="languageDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
           </a>
-          <div class="dropdown-menu" aria-labelledby="languageDropdown">
-            <a class="dropdown-item" href="#" onclick="loadTranslations('en')">EN</a>
-            <a class="dropdown-item" href="#" onclick="loadTranslations('es')">ES</a>
-          </div>
-        </li>
-      </ul>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item" href="#" onclick="loadTranslations('en')"
+                ><img src="./images/icons/flags/en.svg" alt="English Flag" />
+                EN</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" onclick="loadTranslations('es')"
+                ><img src="./images/icons/flags/es.svg" alt="Spanish Flag" />
+                ES</a
+              >
+            </li>
+            <span class="flag-icon flag-icon-es"></span>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
 
 <script>
-  var currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+  var currentPage = location.pathname.substring(
+    location.pathname.lastIndexOf("/") + 1
+  );
   var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
   for (var i = 0; i < navLinks.length; i++) {
     var link = navLinks[i];
@@ -37,7 +65,6 @@
     var linkHref = link.getAttribute("href");
     var linkPage = linkHref.substring(linkHref.lastIndexOf("/") + 1);
 
-    if (linkPage === currentPage)
-      link.setAttribute("aria-current", "page");
+    if (linkPage === currentPage) link.setAttribute("aria-current", "page");
   }
 </script>

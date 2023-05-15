@@ -1,8 +1,16 @@
 function loadTranslations(language) {
-  $("#languageDropdown").text(language.toUpperCase());
-  $.getJSON("translations.json", function(data) {
+  $.getJSON("translations.json", function (data) {
     translations = data[language];
     changeLanguage();
+
+    $("#languageDropdown").html(
+      "<img src='images/icons/flags/" +
+        language +
+        ".svg'/>" +
+        language.toUpperCase()
+    );
+    $(".dropdown-item").show();
+    $(".dropdown-item:contains('" + language.toUpperCase() + "')").hide();
   });
 }
 
@@ -15,10 +23,17 @@ function changeLanguage() {
   }
 }
 
-$(document).ready(function () {
-  $("header").load("header.html");
-  $("footer").load("footer.html");
-  $("#sidebar").load("sidebar.html");
+$.get("header.html", function (data) {
+  $("header").html(data); // Load the header content
+
+  // Your code to manipulate the header content goes here
   loadTranslations("en");
-  $("#languageDropdown").text("EN");
+});
+
+$.get("footer.html", function (data) {
+  $("footer").html(data); // Load the footer content
+});
+
+$.get("sidebar.html", function (data) {
+  $("#sidebar").html(data); // Load the sidebar content
 });

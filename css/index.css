@@ -42,6 +42,7 @@ main {
   height: 5rem;
 }
 
-#articles-carousel .carousel-item a:hover, #latest-posts .post .text-container a:hover {
-color: var(--color-2) !important;
+#articles-carousel .carousel-item a:hover,
+#latest-posts .post .text-container a:hover {
+  color: var(--color-2) !important;
 }
