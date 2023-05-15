@@ -66,6 +66,12 @@ header .navbar #headerNavBar .navbar-nav a:hover {
   background: var(--color-2);
 }
 
+[aria-current="page"] {
+  background-color: var(--black-2) !important; 
+  font-size: 1.2rem !important;
+  text-decoration: underline !important;
+}
+
 /**********************/
 /* Footer Styles
 /**********************/
