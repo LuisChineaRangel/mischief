@@ -1,21 +1,22 @@
-function switchLanguage(language) {
-  // Fetch the translations from the JSON file
-  // based on the selected language
-  var translations = window.translations[language];
-
-  // Update the content on the page
-  document.getElementById("title").innerText = translations.title;
-  document.getElementById("content").innerText = translations.content;
+function loadTranslations(language) {
+  $.getJSON("translations.json", function(data) {
+    translations = data[language];
+    changeLanguage();
+  });
 }
 
-// Load the appropriate language on page load
-document.addEventListener("DOMContentLoaded", function () {
-  var userLanguage = getUserLanguage(); // implement a function to get user's preferred language
-  switchLanguage(userLanguage);
-});
+function changeLanguage() {
+  for (var id in translations) {
+    if (translations.hasOwnProperty(id)) {
+      var translation = translations[id];
+      $("#" + id).text(translation);
+    }
+  }
+}
 
 $(document).ready(function () {
   $("header").load("header.html");
   $("footer").load("footer.html");
-  $("#popular-posts").load("popular-posts.html");
+  $("#sidebar").load("sidebar.html");
+  loadTranslations("en");
 });

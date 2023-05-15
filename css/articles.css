@@ -34,11 +34,11 @@
   border: 0;
 }
 
-#sidebar #popular-posts .post .title a {
+#sidebar #popular-posts .post .title a, .post h2 a {
   text-decoration: none;
 }
 
-#sidebar #popular-posts .post .title a:hover {
+#sidebar #popular-posts .post .title a:hover, .post h2 a:hover {
   color: var(--color-1) !important;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
