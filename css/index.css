@@ -19,10 +19,6 @@ main {
   z-index: 10;
 }
 
-#articles-carousel .carousel-item a:hover {
-  color: var(--color-2) !important;
-}
-
 #articles-carousel button .carousel-control-prev-icon,
 #articles-carousel button .carousel-control-next-icon {
   opacity: 1;
@@ -36,4 +32,16 @@ main {
 
 #articles-carousel button .carousel-control-next-icon {
   background-image: url(../images/icons/right-arrow.png);
+}
+
+#latest-posts .post img {
+  border-bottom: 0.4rem solid var(--color-1) !important;
+}
+
+#latest-posts .post .text-container {
+  height: 5rem;
+}
+
+#articles-carousel .carousel-item a:hover, #latest-posts .post .text-container a:hover {
+color: var(--color-2) !important;
 }
