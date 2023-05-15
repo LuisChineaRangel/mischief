@@ -6,7 +6,7 @@ function loadTranslations(language) {
     $("#languageDropdown").html(
       "<img src='images/icons/flags/" +
         language +
-        ".svg'/>" +
+        ".svg' alt='" + language + " flag' /> " +
         language.toUpperCase()
     );
     $(".dropdown-item").show();
