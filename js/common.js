@@ -18,7 +18,7 @@ function changeLanguage() {
   for (var id in translations) {
     if (translations.hasOwnProperty(id)) {
       var translation = translations[id];
-      $("#" + id).text(translation);
+      $("#" + id).html(translation);
     }
   }
 }
