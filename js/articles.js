@@ -1,18 +1,25 @@
-$(document).ready(function () {
+function truncateText() {
   var maxLines = 2; // Maximum number of lines to display
   var lineHeight = parseInt($(".text-container").css("line-height")); // Get the line height of the container
   var maxHeight = lineHeight * maxLines; // Calculate the maximum height
 
-  $(".text-container p").each(function () {
-    var text = $(this).text();
-    var lines = Math.floor($(this).height() / lineHeight);
+  $(".truncated").each(function () {
+    var $textContainer = $(this);
+    var combinedText = ""; // Variable to store the combined text of all elements
 
-    if (lines > maxLines) {
-      var truncatedText = text
-        .split(" ")
-        .slice(0, maxLines * 15)
-        .join(" "); // Adjust the number (7) to control the truncation length
-      $(this).text(truncatedText + "...");
-    }
+    // Iterate over all <p> and <h> tags inside the current text container
+    $textContainer.find("p, h").each(function () {
+      var $element = $(this);
+      combinedText += $element.text().trim() + " "; // Add the text of the current element to the combinedText
+    });
+
+    // Split the combined text into words and join the first x lines with a space
+    var truncatedText = combinedText
+      .split(" ")
+      .slice(0, maxLines * 15)
+      .join(" ");
+
+    // Set the truncated text with ellipsis to all <p> and <h> tags inside the current text container
+    $textContainer.text(truncatedText + "...");
   });
-});
+}

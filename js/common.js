@@ -1,3 +1,12 @@
+function changeLanguage() {
+  for (var id in translations) {
+    if (translations.hasOwnProperty(id)) {
+      var translation = translations[id];
+      $("#" + id).html(translation);
+    }
+  }
+}
+
 function loadTranslations(language) {
   $.getJSON("translations.json", function (data) {
     translations = data[language];
@@ -11,23 +20,20 @@ function loadTranslations(language) {
     );
     $(".dropdown-item").show();
     $(".dropdown-item:contains('" + language.toUpperCase() + "')").hide();
+    truncateText();
+    localStorage.setItem('selectedLanguage', language);
   });
-}
 
-function changeLanguage() {
-  for (var id in translations) {
-    if (translations.hasOwnProperty(id)) {
-      var translation = translations[id];
-      $("#" + id).html(translation);
-    }
-  }
 }
 
 $.get("header.html", function (data) {
   $("header").html(data); // Load the header content
 
   // Your code to manipulate the header content goes here
-  loadTranslations("en");
+  if (localStorage.getItem('selectedLanguage'))
+    loadTranslations(localStorage.getItem('selectedLanguage'));
+  else
+    loadTranslations("en");
 });
 
 $.get("footer.html", function (data) {

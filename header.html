@@ -55,6 +55,11 @@
 </nav>
 
 <script>
+  var storedLanguage = localStorage.getItem('selectedLanguage');
+  if (storedLanguage) {
+    loadTranslations(storedLanguage);
+  }
+
   var currentPage = location.pathname.substring(
     location.pathname.lastIndexOf("/") + 1
   );
