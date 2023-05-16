@@ -20,7 +20,8 @@ function loadTranslations(language) {
     );
     $(".dropdown-item").show();
     $(".dropdown-item:contains('" + language.toUpperCase() + "')").hide();
-    truncateText();
+    if (typeof truncateText === 'function')
+      truncateText();
     localStorage.setItem('selectedLanguage', language);
   });
 
