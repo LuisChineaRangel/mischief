@@ -1,158 +1,308 @@
 <!DOCTYPE html>
 <html lang="EN" translate="no">
+  <head>
+    <title id="index-title"></title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="IluzioDev" />
+    <meta
+      name="desciption"
+      content="Videogame Guides, News, Articles and Reviews."
+    />
+    <meta
+      name="keywords"
+      content="Videogames, Guides, News, Articles, Reviews"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <title id="index-title"></title>
-  <meta charset="UTF-8">
-  <meta name="author" content="IluzioDev">
-  <meta name="desciption" content="Videogame Guides, News, Articles and Reviews.">
-  <meta name="keywords" content="Videogames, Guides, News, Articles, Reviews">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/mischief/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="./css/common.css" rel="stylesheet" />
+    <link href="./css/index.css" rel="stylesheet" />
+  </head>
 
-  <link href="./images/mischief/favicon.ico" rel="icon" type="image/x-icon">
-  <link href="./css/common.css" rel="stylesheet">
-  <link href="./css/index.css" rel="stylesheet">
-</head>
+  <body class="container-fluid p-0">
+    <header></header>
+    <main class="container p-0 mx-auto">
+      <section id="articles-carousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="shadow"></div>
+            <img
+              src="./images/posts/post-01.webp"
+              width="640"
+              height="360"
+              class="d-block w-100 object-fit-contain"
+              alt=""
+            />
+            <a
+              id="analysis-01"
+              href="./analysis-01.html"
+              class="text-white fs-2 fw-bold"
+            ></a>
+          </div>
+          <div class="carousel-item">
+            <div class="shadow"></div>
+            <img
+              src="./images/posts/post-02.webp"
+              width="640"
+              height="360"
+              class="d-block w-100 object-fit-contain"
+              alt=""
+            />
+            <a
+              id="analysis-02"
+              href="./analysis-02.html"
+              class="text-white fs-2 fw-bold"
+            ></a>
+          </div>
+          <div class="carousel-item">
+            <div class="shadow"></div>
+            <img
+              src="./images/posts/post-03.webp"
+              width="640"
+              height="360"
+              class="d-block w-100 object-fit-contain"
+              alt=""
+            />
+            <a
+              id="analysis-03"
+              href="./analysis-03.html"
+              class="text-white fs-2 fw-bold"
+            ></a>
+          </div>
+          <div class="carousel-item">
+            <div class="shadow"></div>
+            <img
+              src="./images/posts/post-04.webp"
+              width="640"
+              height="360"
+              class="d-block w-100 object-fit-contain"
+              alt=""
+            />
+            <a
+              id="analysis-04"
+              href="./analysis-04.html"
+              class="text-white fs-2 fw-bold"
+            ></a>
+          </div>
+          <div class="carousel-item">
+            <div class="shadow"></div>
+            <img
+              src="./images/posts/post-05.webp"
+              width="640"
+              height="360"
+              class="d-block w-100 object-fit-contain"
+              alt=""
+            />
+            <a
+              id="analysis-05"
+              href="./analysis-05.html"
+              class="text-white fs-2 fw-bold"
+            ></a>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#articles-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#articles-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
+      <section id="latest-posts" class="container py-4">
+        <div class="title mb-4">
+          <h1 id="index-Lastest" class="text-white m-0 p-3"></h1>
+        </div>
+        <div class="row">
+          <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
+            <div>
+              <a href="./analysis-01.html">
+                <img
+                  src="./images/posts/post-01.webp"
+                  alt="Undertale Cover"
+                  width="640"
+                  height="360"
+                  class="d-block w-100 object-fit-contain"
+                />
+              </a>
+            </div>
+            <div class="text-container bg-black p-2">
+              <a
+                id="analysis-01-title"
+                href="./analysis-01.html"
+                class="text-white text-decoration-none d-block fs-5 fw-bold"
+              ></a>
+            </div>
+          </div>
+          <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
+            <div>
+              <a href="./analysis-02.html">
+                <img
+                  src="./images/posts/post-02.webp"
+                  alt="Helltaker Cover"
+                  width="640"
+                  height="360"
+                  class="d-block w-100 object-fit-contain"
+                />
+              </a>
+            </div>
+            <div class="text-container bg-black p-2">
+              <a
+                id="analysis-02-title"
+                href="./analysis-02.html"
+                class="text-white text-decoration-none d-block fs-5 fw-bold"
+              ></a>
+            </div>
+          </div>
+          <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
+            <div>
+              <a href="./analysis-03.html">
+                <img
+                  src="./images/posts/post-03.webp"
+                  alt="Dark Souls Cover"
+                  width="640"
+                  height="360"
+                  class="d-block w-100 object-fit-contain"
+                />
+              </a>
+            </div>
+            <div class="text-container bg-black p-2">
+              <a
+                id="analysis-03-title"
+                href="./analysis-03.html"
+                class="text-white text-decoration-none d-block fs-5 fw-bold"
+              ></a>
+            </div>
+          </div>
+          <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
+            <div>
+              <a href="./analysis-04.html">
+                <img
+                  src="./images/posts/post-04.webp"
+                  alt="Stardew Valley Cover"
+                  width="640"
+                  height="360"
+                  class="d-block w-100 object-fit-contain"
+                />
+              </a>
+            </div>
+            <div class="text-container bg-black p-2">
+              <a
+                id="analysis-04-title"
+                href="./analysis-04.html"
+                class="text-white text-decoration-none d-block fs-5 fw-bold"
+              ></a>
+            </div>
+          </div>
 
-<body class="container-fluid p-0">
-  <header></header>
-  <main class="container p-0 mx-auto">
-    <section id="articles-carousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="shadow"></div>
-          <img src="./images/posts/post-01.webp" class="post-image d-block w-100 object-fit-contain" alt="">
-          <a id="analysis-01" href="./analysis-01.html" class="text-white fs-2 fw-bold"></a>
-        </div>
-        <div class="carousel-item">
-          <div class="shadow"></div>
-          <img src="./images/posts/post-02.webp" class="post-image d-block w-100 object-fit-contain" alt="">
-          <a id="analysis-02" href="./analysis-02.html" class="text-white fs-2 fw-bold"></a>
-        </div>
-        <div class="carousel-item">
-          <div class="shadow"></div>
-          <img src="./images/posts/post-03.webp" class="post-image d-block w-100 object-fit-contain" alt="">
-          <a id="analysis-03" href="./analysis-03.html" class="text-white fs-2 fw-bold"></a>
-        </div>
-        <div class="carousel-item">
-          <div class="shadow"></div>
-          <img src="./images/posts/post-04.webp" class="post-image d-block w-100 object-fit-contain" alt="">
-          <a id="analysis-04" href="./analysis-04.html" class="text-white fs-2 fw-bold"></a>
-        </div>
-        <div class="carousel-item">
-          <div class="shadow"></div>
-          <img src="./images/posts/post-05.webp" class="post-image d-block w-100 object-fit-contain" alt="">
-          <a id="analysis-05" href="./analysis-05.html" class="text-white fs-2 fw-bold"></a>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#articles-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#articles-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </section>
-    <section id="latest-posts" class="container py-4">
-      <div class="title mb-4">
-        <h1 id="index-Lastest" class="text-white m-0 p-3"></h1>
-      </div>
-      <div class="row">
-        <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
-          <div>
-            <a href="./analysis-01.html">
-              <img src="./images/posts/post-01.webp" alt="Undertale Cover" class="post-image d-block w-100 object-fit-contain">
-            </a>
+          <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
+            <div>
+              <a href="./news-04.html">
+                <img
+                  src="./images/posts/post-14.webp"
+                  alt="Activision Blizzard CEO"
+                  width="640"
+                  height="360"
+                  class="d-block w-100 object-fit-contain"
+                />
+              </a>
+            </div>
+            <div class="text-container bg-black p-2">
+              <a
+                id="news-04-title"
+                href="./news-04.html"
+                class="text-white text-decoration-none d-block fs-5 fw-bold"
+              ></a>
+            </div>
           </div>
-          <div class="text-container bg-black p-2">
-            <a id="analysis-01-title" href="./analysis-01.html" class="text-white text-decoration-none d-block fs-5 fw-bold"></a>
+          <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
+            <div>
+              <a href="./guide-03.html">
+                <img
+                  src="./images/posts/post-08.webp"
+                  alt="Sekiro Cover"
+                  width="640"
+                  height="360"
+                  class="d-block w-100 object-fit-contain"
+                />
+              </a>
+            </div>
+            <div class="text-container bg-black p-2">
+              <a
+                id="guide-03-title"
+                href="./guide-03.html"
+                class="text-white text-decoration-none d-block fs-5 fw-bold"
+              ></a>
+            </div>
           </div>
-        </div>
-        <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
-          <div>
-            <a href="./analysis-02.html">
-              <img src="./images/posts/post-02.webp" alt="Helltaker Cover" class="post-image d-block w-100 object-fit-contain">
-            </a>
+          <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
+            <div>
+              <a href="./guide-05.html">
+                <img
+                  src="./images/posts/post-10.webp"
+                  alt="Satisfactory Cover"
+                  width="640"
+                  height="360"
+                  class="d-block w-100 object-fit-contain"
+                />
+              </a>
+            </div>
+            <div class="text-container bg-black p-2">
+              <a
+                id="guide-05-title"
+                href="./guide-05.html"
+                class="text-white text-decoration-none d-block fs-5 fw-bold"
+              ></a>
+            </div>
           </div>
-          <div class="text-container bg-black p-2">
-            <a id="analysis-02-title" href="./analysis-02.html" class="text-white text-decoration-none d-block fs-5 fw-bold"></a>
-          </div>
-        </div>
-        <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
-          <div>
-            <a href="./analysis-03.html">
-              <img src="./images/posts/post-03.webp" alt="Dark Souls Cover" class="post-image d-block w-100 object-fit-contain">
-            </a>
-          </div>
-          <div class="text-container bg-black p-2">
-            <a id="analysis-03-title" href="./analysis-03.html" class="text-white text-decoration-none d-block fs-5 fw-bold"></a>
-          </div>
-        </div>
-        <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
-          <div>
-            <a href="./analysis-04.html">
-              <img src="./images/posts/post-04.webp" alt="Stardew Valley Cover" class="post-image d-block w-100 object-fit-contain">
-            </a>
-          </div>
-          <div class="text-container bg-black p-2">
-            <a id="analysis-04-title" href="./analysis-04.html" class="text-white text-decoration-none d-block fs-5 fw-bold"></a>
+          <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
+            <div>
+              <a href="./analysis-05.html">
+                <img
+                  src="./images/posts/post-05.webp"
+                  alt="God of War Cover"
+                  width="640"
+                  height="360"
+                  class="d-block w-100 object-fit-contain"
+                />
+              </a>
+            </div>
+            <div class="text-container bg-black p-2">
+              <a
+                id="analysis-05-title"
+                href="./analysis-05.html"
+                class="text-white text-decoration-none d-block fs-5 fw-bold"
+              ></a>
+            </div>
           </div>
         </div>
-      
-        <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
-          <div>
-            <a href="./news-04.html">
-              <img src="./images/posts/post-14.webp" alt="Activision Blizzard CEO" class="post-image d-block w-100 object-fit-contain">
-            </a>
-          </div>
-          <div class="text-container bg-black p-2">
-            <a id="news-04-title" href="./news-04.html" class="text-white text-decoration-none d-block fs-5 fw-bold"></a>
-          </div>
-        </div>
-        <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
-          <div>
-            <a href="./guide-03.html">
-              <img src="./images/posts/post-08.webp" alt="Sekiro Cover" class="post-image d-block w-100 object-fit-contain">
-            </a>
-          </div>
-          <div class="text-container bg-black p-2">
-            <a id="guide-03-title" href="./guide-03.html" class="text-white text-decoration-none d-block fs-5 fw-bold"></a>
-          </div>
-        </div>
-        <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
-          <div>
-            <a href="./guide-05.html">
-              <img src="./images/posts/post-10.webp" alt="Satisfactory Cover" class="post-image d-block w-100 object-fit-contain">
-            </a>
-          </div>
-          <div class="text-container bg-black p-2">
-            <a id="guide-05-title" href="./guide-05.html" class="text-white text-decoration-none d-block fs-5 fw-bold"></a>
-          </div>
-        </div>
-        <div class="post col-xl-3 col-lg-4 col-md-6 p-2">
-          <div>
-            <a href="./analysis-05.html">
-              <img src="./images/posts/post-05.webp" alt="God of War Cover" class="post-image d-block w-100 object-fit-contain">
-            </a>
-          </div>
-          <div class="text-container bg-black p-2">
-            <a id="analysis-05-title" href="./analysis-05.html" class="text-white text-decoration-none d-block fs-5 fw-bold"></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer></footer>
-  <link href="./css/fontawesome/css/all.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-  <script src="./js/jquery-3.6.4.min.js"></script>
-  <script src="./js/index.js"></script>
-  <script src="./js/common.js"></script>
-</body>
-
+      </section>
+    </main>
+    <footer></footer>
+    <link href="./css/fontawesome/css/all.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
 </html>

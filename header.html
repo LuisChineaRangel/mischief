@@ -36,14 +36,12 @@
           <ul class="dropdown-menu" aria-labelledby="languageDropdown">
             <li>
               <a class="dropdown-item" href="#" onclick="loadTranslations('en')"
-                ><img src="./images/icons/flags/en.svg" alt="en flag" />
-                EN</a
+                ><img src="./images/icons/flags/en.svg" alt="en flag" /> EN</a
               >
             </li>
             <li>
               <a class="dropdown-item" href="#" onclick="loadTranslations('es')"
-                ><img src="./images/icons/flags/es.svg" alt="es flag" />
-                ES</a
+                ><img src="./images/icons/flags/es.svg" alt="es flag" /> ES</a
               >
             </li>
             <span class="flag-icon flag-icon-es"></span>
@@ -55,7 +53,7 @@
 </nav>
 
 <script>
-  var storedLanguage = localStorage.getItem('selectedLanguage');
+  var storedLanguage = localStorage.getItem("selectedLanguage");
   if (storedLanguage) {
     loadTranslations(storedLanguage);
   }

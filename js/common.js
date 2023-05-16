@@ -15,26 +15,25 @@ function loadTranslations(language) {
     $("#languageDropdown").html(
       "<img src='images/icons/flags/" +
         language +
-        ".svg' alt='" + language + " flag' /> " +
+        ".svg' alt='" +
+        language +
+        " flag' /> " +
         language.toUpperCase()
     );
     $(".dropdown-item").show();
     $(".dropdown-item:contains('" + language.toUpperCase() + "')").hide();
-    if (typeof truncateText === 'function')
-      truncateText();
-    localStorage.setItem('selectedLanguage', language);
+    if (typeof truncateText === "function") truncateText();
+    localStorage.setItem("selectedLanguage", language);
   });
-
 }
 
 $.get("header.html", function (data) {
   $("header").html(data); // Load the header content
 
   // Your code to manipulate the header content goes here
-  if (localStorage.getItem('selectedLanguage'))
-    loadTranslations(localStorage.getItem('selectedLanguage'));
-  else
-    loadTranslations("en");
+  if (localStorage.getItem("selectedLanguage"))
+    loadTranslations(localStorage.getItem("selectedLanguage"));
+  else loadTranslations("en");
 });
 
 $.get("footer.html", function (data) {
@@ -43,15 +42,4 @@ $.get("footer.html", function (data) {
 
 $.get("sidebar.html", function (data) {
   $("#sidebar").html(data); // Load the sidebar content
-});
-
-$(document).ready(function () {
-  var images = document.getElementsByClassName("post-image");
-  const width="640"
-  const height="360"
-
-  for (var i = 0; i < images.length; i++) {
-    images[i].width = width;
-    images[i].height = height;
-  }
 });

@@ -59,34 +59,38 @@
             </div>
           </div>
           <div class="col-auto mt-3 mb-3">
-            <button id="footer-send" type="submit" class="btn btn-outline-light"></button>
+            <button
+              id="footer-send"
+              type="submit"
+              class="btn btn-outline-light"
+            ></button>
           </div>
           <script>
-            var emailInput = document.getElementById('contact');
-            var sendButton = document.getElementById('footer-send');
-          
+            var emailInput = document.getElementById("contact");
+            var sendButton = document.getElementById("footer-send");
+
             // Event listener for form submission
-            sendButton.addEventListener('click', function(event) {
+            sendButton.addEventListener("click", function (event) {
               event.preventDefault(); // Prevent the default form submission
-          
+
               // Validate the email field
               var email = emailInput.value.trim();
-              if (email === '') {
+              if (email === "") {
                 // Handle empty email field
-                alert('Please provide an email address.');
+                alert("Please provide an email address.");
                 return;
               }
-          
+
               // Regular expression for email format validation
               var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
               if (!emailRegex.test(email)) {
                 // Handle invalid email format
-                alert('Please provide a valid email address.');
+                alert("Please provide a valid email address.");
                 return;
               }
-          
+
               // Email is valid, continue with form submission or further processing
-              alert('Email is valid:', email);
+              alert("Email is valid:", email);
               // Perform further actions here (e.g., form submission)
             });
           </script>
@@ -98,29 +102,28 @@
       id="info"
       class="d-flex flex-wrap justify-content-center align-items-center"
     >
-      <a id="footer-about"
+      <a
+        id="footer-about"
         class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-1"
         href="our-team.html"
-        ></a
-      >
-      <a id="footer-privacy"
+      ></a>
+      <a
+        id="footer-privacy"
         class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-1"
         href="./privacy.html"
-        ></a
-      >
-      <a id="footer-terms"
+      ></a>
+      <a
+        id="footer-terms"
         class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-1"
         href="terms.html"
-        ></a
-      >
-      <a id="footer-store"
+      ></a>
+      <a
+        id="footer-store"
         class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-1"
         href="https://store.steampowered.com/"
-        ></a
-      >
+      ></a>
     </section>
   </div>
 </div>
 
-<div id="copyright" class="bg-dark text-center p-3" lang="en">
-</div>
+<div id="copyright" class="bg-dark text-center p-3" lang="en"></div>

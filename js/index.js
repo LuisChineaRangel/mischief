@@ -32,4 +32,4 @@ function truncateText() {
       $(this).text(truncatedText + "...");
     }
   });
-};
+}
