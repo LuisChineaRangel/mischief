@@ -1,43 +1,40 @@
+<style>
+  #subscription-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: none;
+    width: max-content;
+    z-index: 100;
+  }
+
+  #subscription-message .close-button {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0.5rem;
+  }
+</style>
 <link href="./css/fontawesome/css/all.css" rel="stylesheet" />
 <div class="bg-black text-center text-white">
   <div class="container p-4">
     <!-- Social Media -->
     <section class="mb-4">
-      <a
-        class="btn btn-outline-light btn-floating rounded-circle m-1"
-        href="mailto:luischinearangel@gmail.com"
-        role="button"
-        aria-label="Gmail: luischinearangel@gmail.com"
-        ><i class="fab fa-google"></i
-      ></a>
-      <a
-        class="btn btn-outline-light btn-floating rounded-circle m-1"
-        href="https://twitter.com/iluzioDev"
-        role="button"
-        aria-label="Twitter Profile: iluzioDev"
-        ><i class="fab fa-twitter"></i
-      ></a>
-      <a
-        class="btn btn-outline-light btn-floating rounded-circle m-1"
-        href="https://www.instagram.com/iluziodraws"
-        role="button"
-        aria-label="Instagram Profile: iluziodraws"
-        ><i class="fab fa-instagram"></i
-      ></a>
-      <a
-        class="btn btn-outline-light btn-floating rounded-circle m-1"
-        href="https://www.linkedin.com/in/luischinearangel"
-        role="button"
-        aria-label="LinkedIn Profile: luischinearangel"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-      <a
-        class="btn btn-outline-light btn-floating rounded-circle m-1"
-        href="https://github.com/IluzioDev"
-        role="button"
-        aria-label="GitHub Profile: IluzioDev"
-        ><i class="fab fa-github"></i
-      ></a>
+      <a class="btn btn-outline-light btn-floating rounded-circle m-1" href="mailto:luischinearangel@gmail.com"
+        role="button" aria-label="Gmail: luischinearangel@gmail.com"><i class="fab fa-google"></i></a>
+      <a class="btn btn-outline-light btn-floating rounded-circle m-1" href="https://twitter.com/iluzioDev"
+        role="button" aria-label="Twitter Profile: iluzioDev"><i class="fab fa-twitter"></i></a>
+      <a class="btn btn-outline-light btn-floating rounded-circle m-1" href="https://www.instagram.com/iluziodraws"
+        role="button" aria-label="Instagram Profile: iluziodraws"><i class="fab fa-instagram"></i></a>
+      <a class="btn btn-outline-light btn-floating rounded-circle m-1"
+        href="https://www.linkedin.com/in/luischinearangel" role="button"
+        aria-label="LinkedIn Profile: luischinearangel"><i class="fab fa-linkedin-in"></i></a>
+      <a class="btn btn-outline-light btn-floating rounded-circle m-1" href="https://github.com/IluzioDev" role="button"
+        aria-label="GitHub Profile: IluzioDev"><i class="fab fa-github"></i></a>
     </section>
     <!-- Contact Form -->
     <section id="contact-form">
@@ -50,51 +47,57 @@
           </div>
           <div class="col-md-5 col-12">
             <div class="form-floating">
-              <input
-                type="email"
-                id="contact"
-                class="form-control"
-                placeholder="name@example.com"
-                required
-              />
+              <input type="email" id="contact" class="form-control" placeholder="name@example.com" required />
               <label id="footer-email" for="contact"></label>
             </div>
           </div>
           <div class="col-auto mt-3 mb-3">
-            <button
-              id="footer-send"
-              type="submit"
-              class="btn btn-outline-light"
-            ></button>
+            <button id="footer-send" type="submit" class="btn btn-outline-light" onclick="submitForm(event)"></button>
           </div>
+          <div id="subscription-message">
+            <span id="subscription-text"></span>
+            <span class="close-button" onclick="closeMessage()">X</span>
+          </div>
+          <script>
+
+            function submitForm(event) {
+              var emailInput = document.getElementById("contact").value;
+              // You can perform any necessary validation on the emailInput here before proceeding
+
+              // Store the email input in the browser's localStorage
+              localStorage.setItem("emailInput", emailInput);
+            }
+
+            function closeMessage() {
+              document.getElementById("subscription-message").style.display = "none";
+            }
+
+            // Check if there is a stored email input in the localStorage
+            var storedEmail = localStorage.getItem("emailInput");
+            if (storedEmail) {
+              // Remove the stored email input from localStorage
+              localStorage.removeItem("emailInput");
+              // Display the subscription message
+              document.getElementById("subscription-message").style.display = "block";
+            }
+          </script>
         </div>
       </form>
     </section>
     <!-- Links and Info -->
-    <section
-      id="info"
-      class="d-flex flex-wrap justify-content-center align-items-center"
-    >
-      <a
-        id="footer-about"
+    <section id="info" class="d-flex flex-wrap justify-content-center align-items-center">
+      <a id="footer-about"
         class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-1"
-        href="our-team.html"
-      ></a>
-      <a
-        id="footer-privacy"
+        href="our-team.html"></a>
+      <a id="footer-privacy"
         class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-1"
-        href="./privacy.html"
-      ></a>
-      <a
-        id="footer-terms"
+        href="./privacy.html"></a>
+      <a id="footer-terms"
         class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-1"
-        href="terms.html"
-      ></a>
-      <a
-        id="footer-store"
+        href="terms.html"></a>
+      <a id="footer-store"
         class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-1"
-        href="https://store.steampowered.com/"
-      ></a>
+        href="https://store.steampowered.com/"></a>
     </section>
   </div>
 </div>
