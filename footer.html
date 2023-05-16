@@ -55,6 +55,7 @@
                 id="contact"
                 class="form-control"
                 placeholder="name@example.com"
+                required
               />
               <label id="footer-email" for="contact"></label>
             </div>
@@ -66,35 +67,6 @@
               class="btn btn-outline-light"
             ></button>
           </div>
-          <script>
-            var emailInput = document.getElementById("contact");
-            var sendButton = document.getElementById("footer-send");
-
-            // Event listener for form submission
-            sendButton.addEventListener("click", function (event) {
-              event.preventDefault(); // Prevent the default form submission
-
-              // Validate the email field
-              var email = emailInput.value.trim();
-              if (email === "") {
-                // Handle empty email field
-                alert("Please provide an email address.");
-                return;
-              }
-
-              // Regular expression for email format validation
-              var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-              if (!emailRegex.test(email)) {
-                // Handle invalid email format
-                alert("Please provide a valid email address.");
-                return;
-              }
-
-              // Email is valid, continue with form submission or further processing
-              alert("Email is valid:", email);
-              // Perform further actions here (e.g., form submission)
-            });
-          </script>
         </div>
       </form>
     </section>
