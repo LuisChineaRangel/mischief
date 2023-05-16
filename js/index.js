@@ -16,7 +16,7 @@ $(document).ready(function () {
 });
 
 function truncateText() {
-  var maxLines = 2; // Maximum number of lines to display
+  var maxLines = 1; // Maximum number of lines to display
   var lineHeight = parseInt($(".text-container").css("line-height")); // Get the line height of the container
   var maxHeight = lineHeight * maxLines; // Calculate the maximum height
 
@@ -27,7 +27,7 @@ function truncateText() {
     if (lines > maxLines) {
       var truncatedText = text
         .split(" ")
-        .slice(0, maxLines * 3)
+        .slice(0, maxLines * 7)
         .join(" "); // Adjust the number to control the truncation length
       $(this).text(truncatedText + "...");
     }

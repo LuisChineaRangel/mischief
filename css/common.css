@@ -137,3 +137,8 @@ h1 {
   background-color: black;
   border-bottom: 0.5rem solid var(--color-1);
 }
+
+img {
+  height: auto;
+  width: 100%;
+}

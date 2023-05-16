@@ -44,3 +44,14 @@ $.get("footer.html", function (data) {
 $.get("sidebar.html", function (data) {
   $("#sidebar").html(data); // Load the sidebar content
 });
+
+$(document).ready(function () {
+  var images = document.getElementsByClassName("post-image");
+  const width="640"
+  const height="360"
+
+  for (var i = 0; i < images.length; i++) {
+    images[i].width = width;
+    images[i].height = height;
+  }
+});

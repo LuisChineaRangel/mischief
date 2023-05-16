@@ -27,11 +27,11 @@ main {
 }
 
 #articles-carousel button .carousel-control-prev-icon {
-  background-image: url(../images/icons/left-arrow.png);
+  background-image: url(../images/icons/left-arrow.webp);
 }
 
 #articles-carousel button .carousel-control-next-icon {
-  background-image: url(../images/icons/right-arrow.png);
+  background-image: url(../images/icons/right-arrow.webp);
 }
 
 #latest-posts .post img {
